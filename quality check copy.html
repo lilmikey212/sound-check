@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>Bảng IPA – Popup Cambridge</title>
+<title>Bảng IPA</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -23,6 +23,7 @@ h1 {
   display: flex;
   justify-content: center; 
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 table {
@@ -36,6 +37,7 @@ th, td {
   padding: 10px;
   text-align: center;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 th {
@@ -43,7 +45,6 @@ th {
   color: white;
   
 }
-
 .vowel {
   background: #00caca;
   color: white;
@@ -58,6 +59,7 @@ th {
 .ipa {
   font-size: 13px;
   color: #555;
+  font-family: "Times New Roman", "Georgia", serif;
 }
 
 #popup {
@@ -162,7 +164,11 @@ th {
   cursor: pointer;
   flex-shrink: 0;
 }
-
+.popup {
+  max-width: 90vw;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
 </style>
 </head>
@@ -388,8 +394,8 @@ th {
   <div class="word">liː</div>
 </td>
 
-<td onclick="openPopup('ɡriː', '/ɡriːn/', 'ɡriː + n → green', 'green', event)">
-  <div class="word">ɡriː</div>
+<td onclick="openPopup('ɡiː', '/ɡriːn/', 'ɡriː + n → green', 'green', event)">
+  <div class="word">ɡiː</div>
 </td>
 
 <td onclick="openPopup('kiː', '/kiː/', 'k + iː → key', 'key', event)">
@@ -420,8 +426,8 @@ th {
   <div class="word">ðiː</div>
 </td>
 <td></td>
-<td onclick="openPopup('θriː', '/θriː/', 'θr + iː → three', 'three', event)">
-  <div class="word">θriː</div>
+<td onclick="openPopup('θiː', '/θriː/', 'θr + iː → three', 'three', event)">
+  <div class="word">θiː</div>
 </td>
 
 <td onclick="openPopup('ʃiː', '/ʃiː/', 'ʃ + iː → she', 'she', event)">
@@ -475,7 +481,7 @@ th {
   <div class="word">ge</div>
 </td>
 
-<td onclick="openPopup('ke', '/ˈketl/', 'ke + tl → kettle', 'kettle', event)">
+<td onclick="openPopup('ke', '/ˈke.təl/', 'ke + təl → kettle', 'kettle', event)">
   <div class="word">ke</div>
 </td>
 
@@ -499,7 +505,7 @@ th {
   <div class="word">we</div>
 </td>
 
-<td onclick="openPopup('ve', '/ˈveri/', 've + ri → very', 'very', event)">
+<td onclick="openPopup('ve', '/ˈve.ri/', 've + ri → very', 'very', event)">
   <div class="word">ve</div>
 </td>
 
@@ -554,7 +560,7 @@ th {
   <div class="word">nʌ</div>
 </td>
 
-<td onclick="openPopup('lʌ', '/lʌk/', 'l + ʌ + k → luck', 'luck', event)">
+<td onclick="openPopup('lʌ', '/lʌk/', 'lʌ + k → luck', 'luck-1', event)">
   <div class="word">lʌ</div>
 </td>
 
@@ -615,7 +621,7 @@ th {
   <div class="word">pɒ</div>
 </td>
 
-<td onclick="openPopup('mɒ', '/ˈmɒd.əl/', 'mɒ + d → model', 'model', event)">
+<td onclick="openPopup('mɒ', '/ˈmɒ.dəl/', 'mɒ + dəl → model', 'model', event)">
   <div class="word">mɒ</div>
 </td>
 
@@ -655,7 +661,7 @@ th {
   <div class="word">sɒ</div>
 </td>
 
-<td onclick="openPopup('zɒ', '/ˈzɒm.bi/', 'zɒ + m → zombie', 'zombie', event)">
+<td onclick="openPopup('zɒ', '/ˈzɒm.bi/', 'zɒ + mbi → zombie', 'zombie', event)">
   <div class="word">zɒ</div>
 </td>
 
@@ -734,7 +740,7 @@ th {
   <div class="word">sə</div>
 </td>
 
-<td onclick="openPopup('zə', '/həˈraɪ.zən/', 'hə+raɪ+zən → horizon', 'zebra', event)">
+<td onclick="openPopup('zə', '/ˈsiː.zən/', 'siː+zən → season', 'season', event)">
   <div class="word">zə</div>
 </td>
 <td></td>
@@ -828,15 +834,15 @@ th {
   <div class="word">juː</div>
 </td>
 
-<td onclick="openPopup('θruː', '/θruː/', 'θr + uː → through', 'through', event)">
-  <div class="word">θruː</div>
+<td onclick="openPopup('θuː', '/θruː/', 'θr + uː → through', 'through', event)">
+  <div class="word">θuː</div>
 </td>
 
 <td onclick="openPopup('ʃuː', '/ʃuːz/', 'ʃuː + z → shoes', 'shoes', event)">
   <div class="word">ʃuː</div>
 </td>
 
-<td onclick="openPopup('dʒuː', '/dʒuːn/', 'dʒuː + n → June', 'June', event)">
+<td onclick="openPopup('dʒuː', '/dʒuːn/', 'dʒuː + n → June', 'june', event)">
   <div class="word">dʒuː</div>
 </td>
 
@@ -912,7 +918,7 @@ th {
   <div class="word">pɑː</div>
 </td>
 
-<td onclick="openPopup('mɑː', '/mɑːtʃ/', 'mɑː + tʃ → march', 'march', event)">
+<td onclick="openPopup('mɑː', '/mɑːtʃ/', 'mɑː + tʃ → March', 'march', event)">
   <div class="word">mɑː</div>
 </td>
 
@@ -1099,11 +1105,11 @@ th {
   <div class="word">peɪ</div>
 </td>
 
-<td onclick="openPopup('meɪ', '/meɪl/', 'm + eɪl → mail', 'mail', event)">
+<td onclick="openPopup('meɪ', '/meɪl/', 'meɪ + l → mail', 'mail', event)">
   <div class="word">meɪ</div>
 </td>
 
-<td onclick="openPopup('feɪ', '/feɪs/', 'f + eɪs → face', 'face', event)">
+<td onclick="openPopup('feɪ', '/feɪs/', 'feɪ + s → face', 'face', event)">
   <div class="word">feɪ</div>
 </td>
 
@@ -1199,19 +1205,19 @@ th {
   <div class="word">taɪ</div>
 </td>
 
-<td onclick="openPopup('naɪ', '/naɪn/', 'n + aɪn → nine', 'nine', event)">
+<td onclick="openPopup('naɪ', '/naɪn/', 'naɪ + n → nine', 'nine', event)">
   <div class="word">naɪ</div>
 </td>
 
-<td onclick="openPopup('laɪ', '/laɪn/', 'l + aɪn → line', 'line', event)">
+<td onclick="openPopup('laɪ', '/laɪn/', 'laɪ + n → line', 'line', event)">
   <div class="word">laɪ</div>
 </td>
 
-<td onclick="openPopup('ɡaɪ', '/ɡaɪd/', 'g + aɪd → guide', 'guide', event)">
+<td onclick="openPopup('ɡaɪ', '/ɡaɪd/', 'gaɪ + d → guide', 'guide', event)">
   <div class="word">ɡaɪ</div>
 </td>
 
-<td onclick="openPopup('kaɪ', '/kaɪt/', 'k + aɪt → kite', 'kite', event)">
+<td onclick="openPopup('kaɪ', '/kaɪt/', 'kaɪ + t → kite', 'kite', event)">
   <div class="word">kaɪ</div>
 </td>
 
@@ -1219,11 +1225,11 @@ th {
   <div class="word">haɪ</div>
 </td>
 
-<td onclick="openPopup('saɪ', '/saɪt/', 's + aɪt → site', 'site', event)">
+<td onclick="openPopup('saɪ', '/saɪt/', 'saɪ + t → site', 'site', event)">
   <div class="word">saɪ</div>
 </td>
 <td></td>
-<td onclick="openPopup('raɪ', '/raɪs/', 'r + aɪs → rice', 'rice', event)">
+<td onclick="openPopup('raɪ', '/raɪs/', 'raɪ + s → rice', 'rice', event)">
   <div class="word">raɪ</div>
 </td>
 
@@ -1231,7 +1237,7 @@ th {
   <div class="word">waɪ</div>
 </td>
 
-<td onclick="openPopup('vaɪ', '/ˌvaɪ.əˈlɪn/', 'vaɪ + əlɪn → violin', 'violin', event)">
+<td onclick="openPopup('vaɪ', '/ˈvaɪ.rəl/', 'vaɪ + rəl → viral', 'viral', event)">
   <div class="word">vaɪ</div>
 </td>
 <td></td><td></td><td></td>
@@ -1254,15 +1260,15 @@ th {
   <div class="word">bɔɪ</div>
 </td>
 
-<td onclick="openPopup('pɔɪ', '/pɔɪnt/', 'p + ɔɪnt → point', 'point', event)">
+<td onclick="openPopup('pɔɪ', '/pɔɪnt/', 'pɔɪ + nt → point', 'point', event)">
   <div class="word">pɔɪ</div>
 </td>
 
-<td onclick="openPopup('mɔɪ', '/mɔɪst/', 'm + ɔɪst → moist', 'moist', event)">
+<td onclick="openPopup('mɔɪ', '/mɔɪst/', 'mɔɪ + st → moist', 'moist', event)">
   <div class="word">mɔɪ</div>
 </td>
 
-<td onclick="openPopup('fɔɪ', '/fɔɪl/', 'f + ɔɪl → foil', 'foil', event)">
+<td onclick="openPopup('fɔɪ', '/fɔɪl/', 'fɔɪ + l → foil', 'foil', event)">
   <div class="word">fɔɪ</div>
 </td>
 <td></td>
@@ -1270,7 +1276,7 @@ th {
   <div class="word">tɔɪ</div>
 </td>
 
-<td onclick="openPopup('nɔɪ', '/nɔɪz/', 'n + ɔɪz → noise', 'noise', event)">
+<td onclick="openPopup('nɔɪ', '/nɔɪz/', 'nɔɪ + z → noise', 'noise', event)">
   <div class="word">nɔɪ</div>
 </td>
 
@@ -1278,11 +1284,11 @@ th {
   <div class="word">lɔɪ</div>
 </td>
 <td></td>
-<td onclick="openPopup('kɔɪ', '/kɔɪn/', 'k + ɔɪn → coin', 'coin', event)">
+<td onclick="openPopup('kɔɪ', '/kɔɪn/', 'kɔɪ + n → coin', 'coin', event)">
   <div class="word">kɔɪ</div>
 </td>
 
-<td onclick="openPopup('hɔɪ', '/hɔɪst/', 'h + ɔɪst → hoist', 'hoist', event)">
+<td onclick="openPopup('hɔɪ', '/hɔɪst/', 'hɔɪ + st → hoist', 'hoist', event)">
   <div class="word">hɔɪ</div>
 </td>
 
@@ -1294,7 +1300,7 @@ th {
   <div class="word">rɔɪ</div>
 </td>
 <td></td>
-<td onclick="openPopup('vɔɪ', '/vɔɪs/', 'v + ɔɪs → voice', 'voice', event)">
+<td onclick="openPopup('vɔɪ', '/vɔɪs/', 'vɔɪ + s → voice', 'voice', event)">
   <div class="word">vɔɪ</div>
 </td>
 <td></td><td></td><td></td><td></td>
@@ -1302,7 +1308,7 @@ th {
   <div class="word">dʒɔɪ</div>
 </td>
 
-<td onclick="openPopup('tʃɔɪ', '/tʃɔɪs/', 'tʃ + ɔɪs → choice', 'choice', event)">
+<td onclick="openPopup('tʃɔɪ', '/tʃɔɪs/', 'tʃɔɪ + s → choice', 'choice', event)">
   <div class="word">tʃɔɪ</div>
 </td>
 
@@ -1318,19 +1324,19 @@ th {
   <div class="word">paʊ</div>
 </td>
 
-<td onclick="openPopup('maʊ', '/maʊs/', 'm + aʊs → mouse', 'mouse', event)">
+<td onclick="openPopup('maʊ', '/maʊs/', 'maʊ + s → mouse', 'mouse', event)">
   <div class="word">maʊ</div>
 </td>
 
-<td onclick="openPopup('faʊ', '/faʊnd/', 'f + aʊnd → found', 'found', event)">
+<td onclick="openPopup('faʊ', '/faʊnd/', 'faʊ + nd → found', 'found', event)">
   <div class="word">faʊ</div>
 </td>
 
-<td onclick="openPopup('daʊ', '/daʊn/', 'd + aʊn → down', 'down', event)">
+<td onclick="openPopup('daʊ', '/daʊn/', 'daʊ + n → down', 'down', event)">
   <div class="word">daʊ</div>
 </td>
 
-<td onclick="openPopup('taʊ', '/taʊn/', 't + aʊn → town', 'town', event)">
+<td onclick="openPopup('taʊ', '/taʊn/', 'taʊ + n → town', 'town', event)">
   <div class="word">taʊ</div>
 </td>
 
@@ -1338,11 +1344,11 @@ th {
   <div class="word">naʊ</div>
 </td>
 
-<td onclick="openPopup('laʊ', '/laʊd/', 'l + aʊd → loud', 'loud', event)">
+<td onclick="openPopup('laʊ', '/laʊd/', 'laʊ + d → loud', 'loud', event)">
   <div class="word">laʊ</div>
 </td>
 
-<td onclick="openPopup('gaʊ', '/gaʊn/', 'g + aʊn → gown', 'gown', event)">
+<td onclick="openPopup('gaʊ', '/gaʊn/', 'gaʊ + n → gown', 'gown', event)">
   <div class="word">gaʊ</div>
 </td>
 
@@ -1354,11 +1360,11 @@ th {
   <div class="word">haʊ</div>
 </td>
 
-<td onclick="openPopup('saʊ', '/saʊnd/', 's + aʊnd → sound', 'sound', event)">
+<td onclick="openPopup('saʊ', '/saʊnd/', 'saʊ + nd → sound', 'sound', event)">
   <div class="word">saʊ</div>
 </td>
 <td></td>
-<td onclick="openPopup('raʊ', '/raʊnd/', 'r + aʊnd → round', 'round', event)">
+<td onclick="openPopup('raʊ', '/raʊnd/', 'raʊ + nd → round', 'round', event)">
   <div class="word">raʊ</div>
 </td>
 
@@ -1375,11 +1381,11 @@ th {
   <div class="word">θaʊ</div>
 </td>
 
-<td onclick="openPopup('ʃaʊ', '/ʃaʊt/', 'ʃ + aʊt → shout', 'shout', event)">
+<td onclick="openPopup('ʃaʊ', '/ʃaʊt/', 'ʃaʊ + t → shout', 'shout', event)">
   <div class="word">ʃaʊ</div>
 </td>
 
-<td onclick="openPopup('dʒaʊ', '/dʒaʊl/', 'dʒ + aʊl → jowl', 'jowl', event)">
+<td onclick="openPopup('dʒaʊ', '/dʒaʊl/', 'dʒaʊ + l → jowl', 'jowl', event)">
   <div class="word">dʒaʊ</div>
 </td>
 <td></td>
@@ -1387,23 +1393,23 @@ th {
 </tr>
 <tr>
 <td class="vowel">/oʊ/</td>
-<td onclick="openPopup('boʊ', '/boʊt/', 'b + oʊt → boat', 'boat', event)">
+<td onclick="openPopup('boʊ', '/boʊt/', 'boʊ + t → boat', 'boat', event)">
   <div class="word">boʊ</div>
 </td>
 
-<td onclick="openPopup('poʊ', '/poʊl/', 'p + oʊl → pole', 'pole', event)">
+<td onclick="openPopup('poʊ', '/poʊl/', 'poʊ + l → pole', 'pole', event)">
   <div class="word">poʊ</div>
 </td>
 
-<td onclick="openPopup('moʊ', '/moʊst/', 'm + oʊst → most', 'most', event)">
+<td onclick="openPopup('moʊ', '/moʊst/', 'moʊ + st → most', 'most', event)">
   <div class="word">moʊ</div>
 </td>
 
-<td onclick="openPopup('foʊ', '/foʊn/', 'f + oʊn → phone', 'phone', event)">
+<td onclick="openPopup('foʊ', '/foʊn/', 'foʊ + n → phone', 'phone', event)">
   <div class="word">foʊ</div>
 </td>
 
-<td onclick="openPopup('doʊ', '/doʊnt/', 'd + oʊnt → don’t', 'dont', event)">
+<td onclick="openPopup('doʊ', '/doʊnt/', 'doʊ +   nt → don’t', 'dont', event)">
   <div class="word">doʊ</div>
 </td>
 
@@ -1423,11 +1429,11 @@ th {
   <div class="word">goʊ</div>
 </td>
 
-<td onclick="openPopup('koʊ', '/koʊt/', 'k + oʊt → coat', 'coat', event)">
+<td onclick="openPopup('koʊ', '/koʊt/', 'koʊ + t → coat', 'coat', event)">
   <div class="word">koʊ</div>
 </td>
 
-<td onclick="openPopup('hoʊ', '/hoʊm/', 'h + oʊm → home', 'home', event)">
+<td onclick="openPopup('hoʊ', '/hoʊm/', 'hoʊ + m → home', 'home', event)">
   <div class="word">hoʊ</div>
 </td>
 
@@ -1435,19 +1441,19 @@ th {
   <div class="word">soʊ</div>
 </td>
 
-<td onclick="openPopup('zoʊ', '/zoʊn/', 'z + oʊn → zone', 'zone', event)">
+<td onclick="openPopup('zoʊ', '/zoʊn/', 'zoʊ + n → zone', 'zone', event)">
   <div class="word">zoʊ</div>
 </td>
 
-<td onclick="openPopup('roʊ', '/roʊd/', 'r + oʊd → road', 'road', event)">
+<td onclick="openPopup('roʊ', '/roʊd/', 'roʊ + d → road', 'road', event)">
   <div class="word">roʊ</div>
 </td>
 
-<td onclick="openPopup('woʊ', '/woʊnt/', 'w + oʊnt → won’t', 'wont', event)">
+<td onclick="openPopup('woʊ', '/woʊnt/', 'woʊ + nt → won’t', 'wont', event)">
   <div class="word">woʊ</div>
 </td>
 
-<td onclick="openPopup('voʊ', '/voʊt/', 'v + oʊt → vote', 'vote', event)">
+<td onclick="openPopup('voʊ', '/voʊt/', 'voʊ + t → vote', 'vote', event)">
   <div class="word">voʊ</div>
 </td>
 
@@ -1467,11 +1473,11 @@ th {
   <div class="word">ʃoʊ</div>
 </td>
 
-<td onclick="openPopup('dʒoʊ', '/dʒoʊk/', 'dʒ + oʊk → joke', 'joke', event)">
+<td onclick="openPopup('dʒoʊ', '/dʒoʊk/', 'dʒoʊ + k → joke', 'joke', event)">
   <div class="word">dʒoʊ</div>
 </td>
 
-<td onclick="openPopup('tʃoʊ', '/tʃoʊk/', 'tʃ + oʊk → choke', 'choke', event)">
+<td onclick="openPopup('tʃoʊ', '/tʃoʊk/', 'tʃoʊ + k → choke', 'choke', event)">
   <div class="word">tʃoʊ  </div>
 </td>
 
@@ -1516,7 +1522,7 @@ th {
   <div class="word">hɪə</div>
 </td>
 
-<td onclick="openPopup('sɪə', '/ˈsɪə.ri.əs/', 'sɪə + ri + əs → serious', 'serious', event)">
+<td onclick="openPopup('sɪə', '/ˈsɪə.riːz/', 'sɪə + riːz → series', 'series', event)">
   <div class="word">sɪə</div>
 </td>
 
@@ -1724,33 +1730,19 @@ function closePopup() {
   }
 }
 
-const audioMap = {
-  bit: "1Wuh7woviKJcznXmF-NTQ-ZNzaQY6__EH",
-  
-  // thêm các file khác
-};
 function playPopupSound() {
   if (currentAudio) {
     currentAudio.pause();
     currentAudio.currentTime = 0;
   }
 
-  const fileId = audioMap[popupAudio];
-  if (!fileId) {
-    console.log("Không tìm thấy file:", popupAudio);
-    return;
-  }
+  const serverBase = "https://file.edubit.vn/storage/3554dce55f341edd431fc711f6816673f081452d/";
 
-  const driveURL = "https://drive.google.com/uc?export=view&id=" + fileId;
+  const audioURL = serverBase + popupAudio + ".mp3";
 
-  currentAudio = document.createElement("audio");
-  currentAudio.src = driveURL;
-  currentAudio.setAttribute("controls", "none");
-  currentAudio.setAttribute("preload", "auto");
+  currentAudio = new Audio(audioURL);
 
-  currentAudio.play().then(() => {
-    console.log("Đã phát:", popupAudio);
-  }).catch(error => {
+  currentAudio.play().catch(error => {
     console.log("Lỗi phát audio:", error);
   });
 }
